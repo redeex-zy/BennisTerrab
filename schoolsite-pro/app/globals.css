@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  @apply bg-zinc-950 text-zinc-100 antialiased;
+}
+
+::selection {
+  @apply bg-cyan-500/30;
+}
+
+.container-x {
+  @apply mx-auto w-full max-w-6xl px-4;
+}
+
+.glow {
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.06),
+    0 0 40px rgba(34,211,238,0.18),
+    0 0 80px rgba(99,102,241,0.12);
+}
+
+.noise {
+  background-image:
+    radial-gradient(circle at 10% 10%, rgba(34,211,238,0.10), transparent 35%),
+    radial-gradient(circle at 90% 20%, rgba(99,102,241,0.14), transparent 40%),
+    radial-gradient(circle at 30% 90%, rgba(244,63,94,0.10), transparent 45%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.12'/%3E%3C/svg%3E");
+  background-size: cover;
+  background-position: center;
+}
+
+.border-soft {
+  @apply border border-white/10;
+}
+
+.card {
+  @apply border-soft rounded-2xl bg-white/5 backdrop-blur;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 font-medium transition;
+}
+
+.btn-primary {
+  @apply btn bg-cyan-500/15 text-cyan-100 border border-cyan-400/20 hover:bg-cyan-500/25;
+}
+
+.btn-ghost {
+  @apply btn bg-white/5 border-soft hover:bg-white/10;
+}
+
+.badge {
+  @apply inline-flex items-center gap-2 rounded-full border-soft bg-white/5 px-3 py-1 text-xs text-zinc-200;
+}

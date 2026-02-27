@@ -1,0 +1,8 @@
+node_modules
+.next
+dist
+out
+*.log
+data/contacts.db
+data/contacts.db-shm
+data/contacts.db-wal
