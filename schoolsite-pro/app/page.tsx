@@ -173,7 +173,7 @@ export default function Page() {
           </div>
 
           <p className="mt-6 text-xs text-zinc-400">
-            Tip: update text and sections inside <span className="text-zinc-200">app/page.tsx</span>.
+
           </p>
         </div>
       </div>
